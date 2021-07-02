@@ -21,7 +21,7 @@ jobs:
 
       - name: Set game configuration
         env:
-          APP_NAME: Unprepared
+          APP_NAME: Un pre pared
           DESCRIPTION: If you were unprepared to make a Twine game, you might make this.
 
           # This must be of the format "N.N.N", where the N's are all numbers
