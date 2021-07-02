@@ -124,7 +124,7 @@ jobs:
         run: npm run make
 
       - name: Publish to GitHub Pages
-        if: ${{ env.PUBLISH_ON_WEB == true }}
+        if: ${{ env.PUBLISH_ON_WEB }}
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
