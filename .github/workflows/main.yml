@@ -32,7 +32,7 @@ jobs:
 
           # If this to 'true', a copy of your game will also be hosted on the web at https://USERNAME.github.io/REPO_NAME
           # Delete or comment out this line to disable that
-          PUBLISH_ON_WEB: true
+          # PUBLISH_ON_WEB: true
         run: |
           echo "APP_NAME=${APP_NAME}" >> $GITHUB_ENV
           echo "DESCRIPTION=${DESCRIPTION}" >> $GITHUB_ENV
@@ -125,7 +125,7 @@ jobs:
         run: npm run make
 
       - name: Publish to GitHub Pages
-        if: ${{ env.PUBLISH_ON_WEB == true }}
+        if: env.PUBLISH_ON_WEB
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
