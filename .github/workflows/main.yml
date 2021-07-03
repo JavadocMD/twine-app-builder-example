@@ -110,7 +110,6 @@ jobs:
           const fs = require('fs');\
           const pkg=require('./app/package.json');\
           pkg.name=process.env.APP_NAME_SAFE;\
-          pkg.productName=process.env.APP_NAME_SAFE;\
           pkg.description=process.env.DESCRIPTION;\
           pkg.version=process.env.VERSION;\
           pkg.author=process.env.AUTHOR;\
