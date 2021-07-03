@@ -37,6 +37,7 @@ jobs:
           PUBLISH_ON_WEB: true
         run: |
           echo "APP_NAME=${APP_NAME}" >> $GITHUB_ENV
+          echo "APP_NAME_SAFE=${APP_NAME_SAFE}" >> $GITHUB_ENV
           echo "DESCRIPTION=${DESCRIPTION}" >> $GITHUB_ENV
           echo "VERSION=${VERSION}" >> $GITHUB_ENV
           echo "AUTHOR=${AUTHOR}" >> $GITHUB_ENV
