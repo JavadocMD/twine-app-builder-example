@@ -21,9 +21,9 @@ jobs:
 
       - name: Set game configuration
         env:
-          APP_NAME: Un pre Pared
-          APP_NAME_SAFE: un-pre-pared
-          
+          APP_NAME: Un prepared
+          APP_NAME_SAFE: un-prepared
+
           DESCRIPTION: If you were unprepared to make a Twine game, you might make this.
 
           # This must be of the format "N.N.N", where the N's are all numbers
@@ -37,7 +37,6 @@ jobs:
           PUBLISH_ON_WEB: true
         run: |
           echo "APP_NAME=${APP_NAME}" >> $GITHUB_ENV
-          echo "APP_NAME_SAFE=${APP_NAME_SAFE}" >> $GITHUB_ENV
           echo "DESCRIPTION=${DESCRIPTION}" >> $GITHUB_ENV
           echo "VERSION=${VERSION}" >> $GITHUB_ENV
           echo "AUTHOR=${AUTHOR}" >> $GITHUB_ENV
@@ -61,8 +60,8 @@ jobs:
       - name: Check out Electron app template
         uses: actions/checkout@v2
         with:
-          repository: lazerwalker/electron-wrapper-template
-          ref: v1.1.0
+          repository: JavadocMD/electron-wrapper-template
+          ref: v1.2.0
           path: app
 
       - name: Set up Electron app environment
@@ -110,7 +109,6 @@ jobs:
           const fs = require('fs');\
           const pkg=require('./app/package.json');\
           pkg.name=process.env.APP_NAME_SAFE;\
-          pkg.productName=process.env.APP_NAME;\
           pkg.description=process.env.DESCRIPTION;\
           pkg.version=process.env.VERSION;\
           pkg.author=process.env.AUTHOR;\
